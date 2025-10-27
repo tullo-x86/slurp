@@ -102,7 +102,7 @@ func Import(
 		return err
 	}
 
-	outbox, err := util.LoadJSON[Outbox](file)
+	outbox, err := util.LoadJSON[Outbox](path.Join(file, "outbox.json"))
 	if err != nil {
 		return err
 	}
